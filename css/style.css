@@ -1,0 +1,170 @@
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
+body {
+	font-family: 'Lato', Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	color: #24292d;
+}
+
+header {
+	background-image: url(../images/mountain.jpg);
+}
+
+
+.full-height {
+	/* vh - viewport height - percentage of available browser window */
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	
+
+	/* when set to position relative - works exactly like normal expect anything inside of this that has posistion absolute with position based on this and not the browser window */
+	position: relative;
+}
+
+
+header h1 {
+	/* enters you into the co-ordinate type positioning */
+	position: absolute;
+	/* top, left, bottom, right */
+	top: 50%;
+	left: 50%;
+	/* you can use negative margin in combination with absolute positioning to correct the offset from position things based on the top left corner */
+	/* IE way of doing things */
+	/*margin: -132px 0 0 -250px;*/
+	/* New better way */
+	/* scale, rotate, move */
+	/* the values inside of transform are relative to the item it is transforming */
+	/* moves up by half the height of the image and moves left by half of the width of the image */
+	transform: translate(-50%, -50%);
+}
+
+.scroll-btn {
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+}
+
+
+h2 {
+	font-size: 30px;
+	padding: 30px 0 20px 0;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.content {
+	max-width: 720px;
+	margin: 0 auto 0 auto;
+	text-align: center;
+	/*background-color: #e0e3e6;*/
+}
+
+.content img {
+	/* anything that is display block will no longer be centered by text-align: center; because only things that display: inline get centered by text-align: center; */
+	display: block;
+	margin: 30px auto;
+	padding: 20px 0 20px 0;
+}
+
+/*.container {
+	max-width: 720px;
+	margin: 0 auto 0 auto;
+	border: solid 2px #000000;
+}
+
+.filters {
+	background-color: #ffffff;
+	text-align: center;
+
+}
+
+.filters img {
+	
+	display: block;
+	margin: 30px auto;
+	padding: 20px 0 20px 0;
+
+} */
+
+/* images with filters sections */
+
+h3 {
+	position: absolute;
+	bottom: 20px;
+
+	/* get the text into the centre */
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 42px;
+	font-weight: 300;
+
+}
+
+.blue-lagoon {
+	background-image: url(../images/blue-lagoon.jpg);
+}
+
+.pool {
+	background-image: url(../images/pool.jpg);
+}
+
+/* with # is id="forest" */
+/* with . is class="forest" */
+
+#forest {
+	background-image: url(../images/forest.jpg);
+}
+
+.boat {
+	background-image: url(../images/boat.jpg);
+}
+
+.river {
+	background-image: url(../images/river.jpg);
+
+}
+
+.contact {
+	background-color: #f3f4f5;
+	padding: 30px 0 30px 0;
+	text-align: center;
+}
+
+/* Hidden on the page but screen readings/seo still sees it*/
+
+label {
+	display: none;
+}
+
+input {
+	margin: 30px 0 30px 0;
+	padding: 15px;
+	width: 50%;
+	border: solid 2px #24292d;
+	background-color: #ffffff;
+	outline: none;
+	transition: all 0.6s;
+}
+
+/*  */
+input:focus {
+	border-color: #16B898;
+}
+
+input[type="submit"]{
+
+}
+
+footer {
+	color: #e0e3e6;
+	padding: 40px 0 40px 0;
+	text-align: center;
+}
